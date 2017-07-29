@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Injector } from '@angular/core';
+import { Injector, Input } from '@angular/core';
 import { SceneComponent } from "app/components/scene/scene.component";
 
 import * as THREE from 'three';
@@ -10,6 +10,7 @@ import * as THREE from 'three';
   styleUrls: ['./object.component.css']
 })
 export class ObjectComponent implements OnInit {
+  @Input() color:string;
   scene;
   constructor(private inj:Injector) { }
   
@@ -19,7 +20,7 @@ export class ObjectComponent implements OnInit {
 
     let geometry = new THREE.BoxGeometry( 1, 1, 1 );
 
-    let material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+    let material = new THREE.MeshBasicMaterial( { color: this.color } );
     let cube = new THREE.Mesh( geometry, material );
     cube.position.set(
       this.randInt(-3,3), 
