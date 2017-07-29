@@ -2,7 +2,8 @@ import {
   Component, 
   OnInit, 
   Input,
-  ViewChild 
+  ViewChild,
+  forwardRef 
 } from '@angular/core';
 import { Scene } from "app/classes/scene";
 
@@ -17,7 +18,7 @@ export class SceneComponent implements OnInit {
 
   sceneContainer: HTMLElement;
   scene:Scene;
-
+  
   constructor() {
 
   }
@@ -40,3 +41,6 @@ export class SceneComponent implements OnInit {
     this.scene = new Scene(container,color);
   }
 }
+
+
+

@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { SceneComponent } from './components/scene/scene.component';
+import { ObjectComponent } from './components/object/object.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SceneComponent
+    SceneComponent,
+    ObjectComponent
   ],
   imports: [
     BrowserModule,
