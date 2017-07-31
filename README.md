@@ -10,8 +10,13 @@ This project implements Three.js Enviroment using angular components.
 
 ```
 
-## Development server
-Run `npm start` for a dev server.
+## Install dependencies
+Run: `npm install`
+
+## Start Development server
+Run: `npm start` for a dev server.
+
+open web browser: `http://localhost:4200`.
 
 ## Build
 
